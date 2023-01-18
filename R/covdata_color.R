@@ -9,14 +9,13 @@
 #' when only one color is needed.
 #' @param ... Accepts the color name in 'covington_colors'
 #' @keywords covdata_color
-#' @export
+
 #' @examples
 #' ggplot +
 #' geom_bar(stat = "identity",
 #'         fill = covdata_color("Covington.Blue"))
 
-
-#` function to assign color from 'covdata_colors' vector to geoms in graph
+#' @export
 covdata_color <<- function(...) {
   cols <- c(...)
   if (is.null(cols)) {

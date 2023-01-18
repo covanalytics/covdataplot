@@ -13,14 +13,10 @@
 #' @param reverse is used to change the default order of colors in the selected color palette.
 #' @keywords covdata_palettes
 #' @references Jumping Rivers--Custom colour palettes for {ggplot2}
-#' @export
 #' @examples
 #' covdata_palettes("Brand")
 
-
-
-
-# function to create a color palette for display
+#' @export
 covdata_palettes <<- function(name,
                               n,
                               all_palettes = covdata_palette_colors,
