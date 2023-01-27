@@ -1,5 +1,5 @@
 
-#' covdata_color_d
+#' covdata_fill_d
 #'
 #' @description  This function is used to apply a fill aesthetic to a discrete variable.
 #' Color palette options come from 'covdata_palette_colors'.

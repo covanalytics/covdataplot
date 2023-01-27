@@ -2,7 +2,7 @@
 % Please edit documentation in R/covdata_fill_d.R
 \name{covdata_fill_d}
 \alias{covdata_fill_d}
-\title{covdata_color_d}
+\title{covdata_fill_d}
 \usage{
 covdata_fill_d(name, reverse = FALSE)
 }
