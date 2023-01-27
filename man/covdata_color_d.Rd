@@ -21,4 +21,7 @@ geom_point(stat = "identity", aes(color = Group), size = 4)+
 covdata_color_d("Pantones", reverse = TRUE)
 
 }
+\references{
+Jumping Rivers--Custom colour palettes for {ggplot2}
+}
 \keyword{covdata_color_d}
