@@ -3,7 +3,7 @@
 #'
 #' @description  covington_colors is a character string that contains the
 #' Pantones and Neutral branding colors, and the original Covington
-#' Blue (Covington.OG.Blue).
+#' Blue (covington.og.blue).
 #' @keywords covington_colors
 #' @examples
 #' covington_colors <<- c("covington.blue" = "#0047ba",
