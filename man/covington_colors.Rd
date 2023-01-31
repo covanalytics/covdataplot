@@ -16,17 +16,17 @@ Pantones and Neutral branding colors, and the original Covington
 Blue (Covington.OG.Blue).
 }
 \examples{
-covington_colors <<- c("Covington.Blue" = "#0047ba",
-                      "Covington.Navy" = "#211261",
-                      "Covington.Dark.Blue" = "#000b8c",
-                      "Covington.Light.Blue" = "#00c1de",
-                      "Covington.Green" = "#38d430",
-                      "Covington.Red" = "#ea0029",
-                      "Covington.Yellow" = "#ffc600",
-                      "Covington.Black" = "#000000",
-                      "Covington.Gray" = "#878787",
-                      "Covington.Light.Gray" = "#cccccc",
-                      "Covington.Plain" = "#ffffff",
-                      "Covington.OG.Blue" = "#46b5d2")
+covington_colors <<- c("covington.blue" = "#0047ba",
+                      "covington.navy" = "#211261",
+                      "covington.dark.blue" = "#000b8c",
+                      "covington.light.blue" = "#00c1de",
+                      "covington.green" = "#38d430",
+                      "covington.red" = "#ea0029",
+                      "covington.yellow" = "#ffc600",
+                      "covington.black" = "#000000",
+                      "covington.gray" = "#878787",
+                      "covington.light.gray" = "#cccccc",
+                      "covington.plain" = "#ffffff",
+                      "covington.og.blue" = "#46b5d2")
 }
 \keyword{covington_colors}
