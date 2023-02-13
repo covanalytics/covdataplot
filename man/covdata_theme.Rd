@@ -32,8 +32,7 @@ modifies the 'theme_bw' default style of the ggplot2 graphics library.
 covdata_theme() #Covington.Basic style
 covdata_theme(plot.background.fill = "covington.gray", text.color = "covington.plain") #Covington.Dark style
 covdata_theme(plot.background.fill = "covington.light.gray") #Covington.Gray style
-covdata_theme(panel.background.fill = "covington.blue",
-plot.backgroundd.fill = "covington.light.blue",
+covdata_theme(panel.background.fill = "covington.blue",plot.backgroundd.fill = "covington.light.blue",
 text.color = "covington.plain") # Covington.Quirky style
 }
 \keyword{covdata_theme}
