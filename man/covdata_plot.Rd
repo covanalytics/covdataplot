@@ -28,7 +28,7 @@ needed as this and the date (ymd) is added automatically to the name.}
 This function will create and save a graphics plot in the
 style that is consistent with the professional brand for the City of Covington.
 It will add a footer that includes the COV logo at the bottom left and a horizontal
-line acrorss the entire plot width in the color covington.blue
+line across the entire plot width in the color covington.blue
 }
 \details{
 For a correctly formatted footer, the plot must contain a Title, Subtitle,
