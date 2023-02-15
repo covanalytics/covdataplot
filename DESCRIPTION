@@ -3,7 +3,7 @@ Type: Package
 Title: MAKE GRAPHICS IN CITY OF COVINGTON BRAND STYLE
 Version: 0.1.0
 Authors@R: person("Todd", "Sink", email = "tsink@covingtonky.gov", c("aut", "cre"))
-Description: Used to create and export graphics that have a style that is 
+Description: Used to create and export graphics in a style that is 
   consistent with the professional brand for the City of Covington.
 Depends: R (>= 4.1.1)
 Imports:
