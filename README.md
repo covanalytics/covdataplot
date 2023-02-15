@@ -1,6 +1,6 @@
 ## README
 
-![](covdata_plot_resized_small.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/covdata_plot_resized_small.png)
 
 This style guide is in development to create a reproducible process of
 creating publication-ready graphics with R’s [ggplot2
@@ -74,7 +74,7 @@ covdata_palette_colors <<- list(
            "#CCEBC5", "#FFED6F"))
 ```
 
-![](color_palettes.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/color_palettes.png)
 
 # City Logos
 
@@ -93,7 +93,7 @@ covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
 #kable(covington_logos, col.names = 'covington_logos')
 ```
 
-![](city_logos_cov.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/city_logos_cov.png)
 
 # How the style guide works
 
