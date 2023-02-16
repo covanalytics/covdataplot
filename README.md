@@ -2,11 +2,19 @@
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/covdataplot_githubsticker.png)
 
-This style guide is in development to create a reproducible process of
-creating publication-ready graphics with R’s [ggplot2
-library](https://ggplot2.tidyverse.org/) following the [branding
-guidelines](https://drive.google.com/file/d/1Eh3ZyeLDSiuMQOcF3Ap1EjZrf43ZZqi2/view?usp=sharing)
-created by Durham Studio for the Economic Development Department.
+# Overview
+
+covdataplot is an R package for creating and exporting ggplot graphics in the professional brand style for the City of Covington, Kentucky. 
+
+# Installation
+
+covdataplot can be installed directly from Github using ```r devtools.```  If the```r devtools``` package is installed, run the line of code below to install covdataplot
+
+``` r
+
+devtools::install_github('covanalytics/covdataplot')
+
+```
 
 # Colors and Palettes
 
@@ -95,7 +103,7 @@ covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/city_logos_cov.png)
 
-# How the style guide works
+# Usage
 
 ## Data Components
 
@@ -621,117 +629,6 @@ covdata_plot(cov_quirky, "cov.logo.white")
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
-# Examples
-
-## Unemployment Rate
-
-``` r
- #specifying labels  
-plot_labels <-  labs(x = "Month/Year", 
-       y = "Incentives\n", 
-       title = "U.S. Recessions and Covington",
-       subtitle = "Covington Unemployment Rate: 1990-2022\n",
-       caption = "Administration\nCity of Covington\nSource: BLS | CovData | 2023")
-  
-
-  
-
-unmp_rate <- read.csv("U:/CityWide Performance/CovStat/CovStat Projects/Development/Economic Development/ky_unemployment_rate_a.csv")
-
-unmp_rate <- unmp_rate %>%
-  filter(Value <= 20 & Group != "Kenton Co." & Group != "Kentucky")%>%#removes rows that are not percents with decimal
-  transmute(Date = lubridate::ym(Label), Rate = Value, Group = Group)%>%
-  mutate(Date = format(strptime(Date, 
-                                format='%Y-%m-%d'), '%Y-%m'))
-plot_labels <-  labs(x = "Month/Year", 
-       y = "Incentives\n", 
-       title = "U.S. Recessions and Covington",
-       subtitle = "Covington Unemployment Rate: 1990-2022\n",
-       caption = "Administration\nCity of Covington\nSource: BLS | CovData | 2023")
-  
-
-#unemployment rate by month and year
-unemployment_plot <- unmp_rate %>%
-  mutate_at(vars(Date), list(ym))%>%
-  mutate(`M-Y` = format(Date, "%m-%Y"))%>%
-  ggplot(aes(x=Date, y=Rate, label = `M-Y`))+
-  geom_rect(aes(xmin = ym("1990-07"), xmax = ym("1991-03"), 
-                ymin = -Inf, ymax = Inf), alpha = 0.01, fill = "#00c1de", colour = NA)+
-  geom_rect(aes(xmin = ym("2001-03"), xmax = ym("2001-11"), 
-                ymin = -Inf, ymax = Inf), alpha = 0.01, fill = "#00c1de", colour = NA)+
-  geom_rect(aes(xmin = ym("2007-12"), xmax = ym("2009-06"), 
-                ymin = -Inf, ymax = Inf), alpha = 0.01, fill = "#00c1de", colour = NA)+
-  geom_rect(aes(xmin = ym("2020-02"), xmax = ym("2020-04"), 
-                ymin = -Inf, ymax = Inf), alpha = 0.01, fill = "#00c1de", colour = NA)+
-  geom_label(aes(x = ym("1991-06"), y = 14, label = "Early 1990s"), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = "black", 
-             fill = "#cccccc", 
-             label.size = NA, 
-             family="Franklin Gothic Medium", 
-             size = 3) +
-  geom_curve(aes(x = ym("1994-06"), y = 13, xend = ym("1991-04"), yend = 12), 
-                           colour = "#878787", 
-                           curvature = -0.3,
-                           size=0.5,
-                          arrow = arrow(length = unit(0.03, "npc")))+
-   geom_label(aes(x = ym("1994-11"), y = 10, label = "Early 2000s"), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = "black", 
-             fill = "#cccccc", 
-             label.size = NA, 
-             family="Franklin Gothic Medium", 
-             size = 3) +
-  geom_curve(aes(x = ym("1999-06"), y = 9, xend = ym("2000-12"), yend = 8), 
-                           colour = "#878787", 
-                           curvature = 0.2,
-                           size=0.5,
-                          arrow = arrow(length = unit(0.03, "npc")))+
-   geom_label(aes(x = ym("2002-09"), y = 12, label = "Great\nRecession"), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = "black", 
-             fill = "#cccccc", 
-             label.size = NA, 
-             family="Franklin Gothic Medium", 
-             size = 3) +
-  geom_curve(aes(x = ym("2005-06"), y = 10.5, xend = ym("2007-06"), yend = 9), 
-                           colour = "#878787", 
-                           curvature = 0.2,
-                           size=0.5,
-                          arrow = arrow(length = unit(0.03, "npc")))+
-  geom_label(aes(x = ym("2015-01"), y = 14, label = "COVID-19"), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = "black", 
-             fill = "#cccccc", 
-             label.size = NA, 
-             family="Franklin Gothic Medium", 
-             size = 3) +
-  geom_curve(aes(x = ym("2017-01"), y = 13, xend = ym("2020-01"), yend = 12), 
-                           colour = "#878787", 
-                           curvature = 0.2,
-                           size=0.5,
-                          arrow = arrow(length = unit(0.03, "npc")))+
-  #geom_area(fill = "red")+
-  geom_line(lwd = 0.8) + 
-  #geom_point(size = 1) +
-  scale_x_date(breaks = seq(ym("1990-01"), ym("2022-12"), by = "10 years"), date_labels = "%Y" )+
-  plot_labels+
- 
-  covdata_theme()
-
-
-covdata_plot(unemployment_plot, "cov.logo.blue", save_name = "cov_unemp_test", save_width = 5, save_height = 4)
-```
-
-![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-17-1.png)
 
 # Extras
 
