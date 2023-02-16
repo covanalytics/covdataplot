@@ -8,7 +8,7 @@ covdataplot is an R package for creating and exporting ggplot graphics in the pr
 
 # Installation
 
-covdataplot can be installed directly from Github using ```r devtools.```  If the```r devtools``` package is installed, run the line of code below to install covdataplot
+covdataplot can be installed directly from Github using ```devtools.```  If the ```devtools``` package is installed, run the line of code below to install covdataplot
 
 ``` r
 
