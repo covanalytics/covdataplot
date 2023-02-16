@@ -111,23 +111,9 @@ graphics plots to match the branding guidelines. The following functions
 make it easier to change the outline and fill colors of visual marks
 that are used to represent data.
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary><b>Data Component Functions</b></summary>
-  <ol>
-    <li><a href="#covdata_color()">covdata_color()</a></li>
-    <li><a href="#covdata_palettes()">covdata_palettes()</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+**Note: Data used in examples below is sampled, as does accurately reflect Covington incentives.**
 
-
-
-## covdata_color()
+### covdata_color()
 
 **`covdata_color()`** was created to access the HEX color code options
 available in **`covington_colors`** by name. In the example below,
@@ -159,11 +145,12 @@ cov_graph_color <- cov_graph +
   labs(title = "Outline-Color")
 
 ggarrange(cov_graph_fill, cov_graph_color, nrow = 1)
+
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-## covdata_palettes()
+### covdata_palettes()
 
 **`covdata_palettes()`** was created to generate a color palette from
 the list of colors in **covdata_palette_colors**. The function has five
@@ -217,10 +204,7 @@ covdata_palettes("Brand")
 
 ### covdata_color_d()
 
-**`covdata_color_d()`** was created to display a discrete color palette
-generated from **`covdata_palettes()`**. A primary use is to change the
-color for data that is represented by points. The function has two
-arguments–**name** and **reverse**.
+**`covdata_color_d()`** was created to apply a color aesthetic to a discrete variable using a discrete color palette generated from **`covdata_palettes()`**.  The function has two arguments–**name** and **reverse**.
 
 -   **name** is the name of the color palette we want to use
 -   **reverse** is used to change the default order of colors contained
@@ -252,10 +236,8 @@ cov_graph +
 
 ### covdata_fill_d()
 
-**`covdata_fill_d()`** was created to display a discrete color palette
-generated from **`covdata_palettes()`**. A primary use is to change the
-color for data that is represented by bars, areas, polygons etc. The
-function has two arguments–**name** and **reverse**.
+**`covdata_fill_d()`** was created to apply a fill aesthetic to a discrete variable using a discrete color palette
+generated from **`covdata_palettes()`**.  The function has two arguments–**name** and **reverse**.
 
 -   **name** is the name of the color palette we want to use
 -   **reverse** is used to change the default order of colors contained
@@ -287,10 +269,8 @@ cov_graph +
 
 ### covdata_color_c()
 
-**`covdata_color_c()`** was created to display a *continuous* color
-palette generated from **`covdata_palettes()`**. A primary use is to
-change the color for data that is represented by points. The function
-has two arguments–**name** and **reverse**.
+**`covdata_color_c()`** was created to apply a color aesthetic to a continuous variable using a *continuous* color
+palette generated from **`covdata_palettes()`**.  The function has two arguments–**name** and **reverse**.
 
 -   **name** is the name of the color palette we want to use
 -   **reverse** is used to change the default order of colors contained
@@ -315,23 +295,17 @@ covdata_color_c <<- function(name, reverse = FALSE){
 cov_graph +
   geom_point(stat = "identity", aes(color = Incentives), size = 4)+
   
-  covdata_color_c("YlOrRd") +
+  covdata_color_c("YlOrRd")
   
-  theme(
-  panel.background = element_rect(fill = covdata_color("Covington.Light.Gray"))
-  )
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 ### covdata_fill_c()
 
-**`covdata_fill_c()`** was created to display a *continuous* color
-palette generated from **`covdata_palettes()`**. A primary use is to
-change the color for data that is represented by bars, areas, polygons
-etc. However, the function can be used to fill points with color when
-*size* and *shape* arguments are supplied to `geom_point()`. The
-function has two arguments–**name** and **reverse**.
+**`covdata_fill_c()`** was created to apply a fill aesthetic to a continuous variable using a *continuous* color
+palette generated from **`covdata_palettes()`**.  The function can be used to fill points with color when
+*size* and *shape* arguments are supplied to `geom_point()`. The function has two arguments–**name** and **reverse**.
 
 -   **name** is the name of the color palette we want to use
 -   **reverse** is used to change the default order of colors contained
