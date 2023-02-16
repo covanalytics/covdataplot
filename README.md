@@ -628,7 +628,7 @@ covdata_palettes_print("Pantones")
 
 **`covdata_palettes_all()`** was created to visualize **ALL** palettes
 simultaneously from the list of 14 palettes contained in
-**covdata_palette_colors**.
+**`covdata_palette_colors`**.
 
 ``` r
 # function to print all color paletttes in a list
