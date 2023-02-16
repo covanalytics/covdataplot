@@ -652,8 +652,8 @@ covdata_palettes_all <- function(palette_list, palette_names){
 
 palette_list <- rev(covdata_palette_colors)
 
-
 palette_names <- rev(names(covdata_palette_colors))
+
 
 covdata_palettes_all(palette_list, palette_names)
 ```
