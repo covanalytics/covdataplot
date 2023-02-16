@@ -333,14 +333,14 @@ pnt_fill <- cov_graph +
   geom_point(stat = "identity", color='black', shape=21, size=4, aes(fill = Incentives))+
   
   covdata_fill_c("YlOrRd") +
-  labs(title = "Point Fill")+
+  labs(title = "Point Fill")
   
 
 bar_fill <- cov_graph +
   geom_bar(stat = "identity", aes(fill = Incentives), size = 4)+
   
   covdata_fill_c("YlOrRd") +
-  labs(title = "Bar Fill")+
+  labs(title = "Bar Fill")
   
 
 ggarrange(pnt_fill, bar_fill, nrow = 1)
@@ -351,27 +351,22 @@ ggarrange(pnt_fill, bar_fill, nrow = 1)
 ## Non-Data Components
 
 Two functions were created to give the non-data components of the
-graphics plots a look that is customized to match the branding
-guidelines. The functions make it easier to change the color of the plot
-background, panel background, and text, and to include the City logo, a
-shaded footer, and to save the graphics plot.
+graphics plots a look that is customizable to match the City of Covington professional branding
+guidelines. The function modifies the **`theme_bw()`** default style of the ggplot2 graphics library.
+The functions make it easier to change the color of the plot background, panel background, and text.
 
 ### covdata_theme()
 
 **`covdata_theme()`** has three arguments–**plot.background.fill**,
-**panel.background.fill** and **text.color**.
+**panel.background.fill** and **text.color**. Each only accepts color options available in **`covington_colors.`**
 
 -   **plot.background.fill** is the color to use to fill the background
     of the entire plot
 -   **panel.background.fill** is the color to use to fill the background
     of the plotting area
--   **text.color** is the color to use for the title, subtitle,
-    captions, and text on plot axes
+-   **text.color** is the color to use for all text displayed in the graphics plot (e.g., the title, subtitle,
+    captions, and text on plot axes)
 
-The *plot.background.fill* argument can only accept color names on the
-Pantones and Neutral color palettes. The *panel.background.fill*
-argument can only accept Covington.Plain (white), Covington.Light.Gray,
-and Covington.Gray. The argument *text.color* can accept any color name.
 
 ``` r
 #Define covdata_theme function
@@ -466,8 +461,6 @@ cov_graph_theme <- cov_graph +
   
 cov_graph_theme + 
   geom_bar(stat = "identity") +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
   
   covdata_theme()
 ```
@@ -476,9 +469,9 @@ cov_graph_theme +
 
 ### covdata_plot()
 
-**`covdata_plot()`** was created to make it finalize the graphics plot
-for distribution. The function has five arguments–**plot**, **logo**,
-**save_name**, **save_width**, and **save_height**.
+**`covdata_plot()`** was created to finalize the graphics plot
+for distribution in accordance with the City of Covington professional brand. This function will add a footer that includes 
+the COV logo at the bottom left and a horizontal line across the entire plot width in the color covington.blue.  The function has five arguments–**plot**, **logo**, **save_name**, **save_width**, and **save_height**.
 
 -   **plot** is the ggplot object containing the data and style
     components.
@@ -489,7 +482,7 @@ for distribution. The function has five arguments–**plot**, **logo**,
 -   **save_width** is the width in inches for the saved graphics plot.
 -   **save_height** is the height in inches for the saved graphics plot.
 
-The example below builds on the previous example and adds a City logo
+
 
 ``` r
 covdata_plot <<- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
@@ -538,6 +531,9 @@ grid.draw(plot_grid)
 
 }
 ```
+
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-13-1.png)
+
 
 # Main Styles
 
