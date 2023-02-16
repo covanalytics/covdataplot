@@ -4,11 +4,11 @@
 
 # Overview
 
-```covdataplot``` is an R package for creating and exporting ggplot graphics in the professional brand style for the City of Covington, Kentucky. 
+**'covdataplot'** is an R package for creating and exporting ggplot graphics in the professional brand style for the City of Covington, Kentucky. 
 
 # Installation
 
-covdataplot can be installed directly from Github using ```devtools.```  If the ```devtools``` package is installed, run the line of code below to install ```covdataplot.```
+covdataplot can be installed directly from Github using **'devtools'**  If the **'devtools'** package is installed, run the line of code below to install **'covdataplot.'** 
 
 ``` r
 
@@ -86,8 +86,8 @@ covdata_palette_colors <<- list(
 
 # City Logos
 
-The four City of Covington logos displayed below are used in ```covdataplot```. The logo names are stored in an
-character stringnamed **`covington_logos`**.  *Unfortunately, at this time, we cannot make these logos files publicly available.*
+The four City of Covington logos displayed below are used in **'covdataplot'**. The logo names are stored in an
+character string named **`covington_logos`**.  *Unfortunately, at this time, we cannot make the image files for these logos publicly available.*
 
 ``` r
 covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
