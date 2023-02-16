@@ -13,7 +13,7 @@
 #' covdata_fill_d("Pantones")
 #'
 #' @export
-covdata_fill_d <<- function(name, reverse = FALSE){
+covdata_fill_d <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_fill_manual(values = covdata_palettes(name,
                                                          type = "discrete",

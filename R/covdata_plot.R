@@ -20,7 +20,7 @@
 #' save_name = "plot_name")
 
 #' @export
-covdata_plot <<- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
+covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
                                          "cov.logo.white"),
                           save_name,
                           save_width = 5,

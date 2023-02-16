@@ -19,7 +19,7 @@
 #'                       "covington.plain" = "#ffffff",
 #'                       "covington.og.blue" = "#46b5d2")
 #' @export
-covington_colors <<- c("covington.blue" = "#0047ba",
+covington_colors <- c("covington.blue" = "#0047ba",
                        "covington.navy" = "#211261",
                        "covington.dark.blue" = "#000b8c",
                        "covington.light.blue" = "#00c1de",

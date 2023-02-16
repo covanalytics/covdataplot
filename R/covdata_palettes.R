@@ -17,7 +17,7 @@
 #' covdata_palettes("Brand")
 
 #' @export
-covdata_palettes <<- function(name,
+covdata_palettes <- function(name,
                               n,
                               all_palettes = covdata_palette_colors,
                               type = c("discrete", "continuous"),

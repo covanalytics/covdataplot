@@ -33,7 +33,7 @@
 #' "#FDB462", "#B3DE69", "#FCCDE5", "#D9D9D9", "#BC80BD","#CCEBC5", "#FFED6F"))
 
 #' @export
-covdata_palette_colors <<- list(
+covdata_palette_colors <- list(
   Brand = c("#1100ff", "#030055", "#09008a", "#00c4f7", "#00e900", "#ff0000", "#ffc500"),
   Pantones = c("#0047ba", "#211261", "#000b8c", "#00c1de", "#38d430", "#ea0029", "#ffc600"),
   Neutrals = c("#000000", "#878787", "#cccccc", "#ffffff"),

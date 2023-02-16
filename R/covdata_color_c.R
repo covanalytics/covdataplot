@@ -13,7 +13,7 @@
 #' covdata_color_c("YlOrRd")
 #'
 #' @export
-covdata_color_c <<- function(name, reverse = FALSE){
+covdata_color_c <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_colour_gradientn(colours = covdata_palettes(name,
                                                                type = "continuous",

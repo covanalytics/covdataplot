@@ -13,7 +13,7 @@
 #' covdata_fill_c("YlOrRd")
 #'
 #' @export
-covdata_fill_c <<- function(name, reverse = FALSE){
+covdata_fill_c <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_fill_gradientn(colours = covdata_palettes(name,
                                                              type = "continuous",

@@ -13,7 +13,7 @@
 #' covdata_color_d("Pantones", reverse = TRUE)
 #'
 #' @export
-covdata_color_d <<- function(name, reverse = FALSE){
+covdata_color_d <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_colour_manual(values = covdata_palettes(name,
                                                            type = "discrete",

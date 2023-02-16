@@ -19,7 +19,7 @@
 #' text.color = "covington.plain") # Covington.Quirky style
 
 #' @export
-covdata_theme <<- function(plot.background.fill = c("covington.plain",
+covdata_theme <- function(plot.background.fill = c("covington.plain",
                                                     "covington.black",
                                                     "covington.blue",
                                                     "covington.navy",

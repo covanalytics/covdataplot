@@ -16,7 +16,7 @@
 #'         fill = covdata_color("Covington.Blue"))
 
 #' @export
-covdata_color <<- function(...) {
+covdata_color <- function(...) {
   cols <- c(...)
   if (is.null(cols)) {
     return (covington_colors)
