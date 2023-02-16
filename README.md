@@ -29,7 +29,7 @@ etc.) when only one color is needed.
 
 ``` r
 #` colors for styling data in graphs (points, bars, etc.)
-covington_colors <<- c("covington.blue" = "#0047ba",
+covington_colors <- c("covington.blue" = "#0047ba",
                     "covington.navy" = "#211261",
                     "covington.dark.blue" = "#000b8c",
                     "covington.light.blue" = "#00c1de",
@@ -57,7 +57,7 @@ palettes](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html).
 All of the color palettes are printed below.
 
 ``` r
-covdata_palette_colors <<- list(
+covdata_palette_colors <- list(
   Brand = c("#1100ff", "#030055", "#09008a", "#00c4f7", "#00e900", "#ff0000", "#ffc500"),
   Pantones = c("#0047ba", "#211261", "#000b8c", "#00c1de", "#38d430", "#ea0029", "#ffc600"),
   Neutrals = c("#000000", "#878787", "#cccccc", "#ffffff"),
@@ -90,7 +90,7 @@ The four City of Covington logos displayed below are used in **`covdataplot`**. 
 character string named **`covington_logos`**.  *Unfortunately, at this time, we cannot make the image files for these logos publicly available.*
 
 ``` r
-covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
+covington_logos <- c("cov.seal.blue"="cov.seal.BLUE.png",
                      "cov.seal.white"="cov.seal.WHITE.png",
                      "cov.logo.blue"="cov.logo.BLUEtm.png",
                      "cov.logo.white"="cov.logo.WHITEtm.png")
@@ -171,7 +171,7 @@ make up the *Brand* color palette
 
 ``` r
 # function to create a color palette for display from  covdata_palette_colors
-covdata_palettes <<- function(name, 
+covdata_palettes <- function(name, 
                             n, 
                             all_palettes = covdata_palette_colors, 
                             type = c("discrete", "continuous"),
@@ -215,7 +215,7 @@ represent fiscal years as points.
 
 ``` r
 # function to color with discrete color palette
-covdata_color_d <<- function(name, reverse = FALSE){
+covdata_color_d <- function(name, reverse = FALSE){
   if(reverse) {
   ggplot2::scale_colour_manual(values = covdata_palettes(name,
                                                          type = "discrete",
@@ -248,7 +248,7 @@ fiscal years as bars.
 
 ``` r
 # function to fill color with discrete color palette
-covdata_fill_d <<- function(name, reverse = FALSE){
+covdata_fill_d <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_fill_manual(values = covdata_palettes(name,
                                                            type = "discrete",
@@ -281,7 +281,7 @@ differences in incentives issued over fiscal year (points).
 
 ``` r
 # function to color with continuous color palette
-covdata_color_c <<- function(name, reverse = FALSE){
+covdata_color_c <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_colour_gradientn(colours = covdata_palettes(name,
                                                            type = "continuous",
@@ -317,7 +317,7 @@ differences in incentives issued over fiscal year.
 ``` r
 # function to fill color with continuous color palette
 
-covdata_fill_c <<- function(name, reverse = FALSE){
+covdata_fill_c <- function(name, reverse = FALSE){
   if(reverse) {
     ggplot2::scale_fill_gradientn(colours = covdata_palettes(name,
                                                                type = "continuous",
@@ -372,7 +372,7 @@ The functions make it easier to change the color of the plot background, panel b
 #Define covdata_theme function
 
 #` function to fill backgrounds and chagne text color
-covdata_theme <<- function(plot.background.fill = c("covington.plain",
+covdata_theme <- function(plot.background.fill = c("covington.plain",
                                                     "covington.black", 
                                                     "covington.blue", 
                                                     "covington.navy", 
@@ -485,7 +485,7 @@ the COV logo at the bottom left and a horizontal line across the entire plot wid
 
 
 ``` r
-covdata_plot <<- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
+covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
                                   "cov.logo.white"), 
                           save_name,
                           save_width = 5,
@@ -560,8 +560,6 @@ covdata_plot(cov_basic, "cov.logo.blue")
 #Covington.Dark
 cov_gray <- cov_graph_theme +
   geom_bar(stat = "identity") +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
   
   covdata_theme(plot.background.fill = "covington.gray", text.color = "covington.plain")
 
