@@ -4,11 +4,11 @@
 
 # Overview
 
-**'covdataplot'** is an R package for creating and exporting ggplot graphics in the professional brand style for the City of Covington, Kentucky. 
+**`covdataplot`** is an R package for creating and exporting ggplot graphics in the professional brand style for the City of Covington, Kentucky. 
 
 # Installation
 
-covdataplot can be installed directly from Github using **'devtools'**  If the **'devtools'** package is installed, run the line of code below to install **'covdataplot.'** 
+covdataplot can be installed directly from Github using **`devtools`**  If the **`devtools`** package is installed, run the line of code below to install **`covdataplot.`** 
 
 ``` r
 
