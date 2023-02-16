@@ -8,7 +8,7 @@
 
 # Installation
 
-covdataplot can be installed directly from Github using **`devtools`**  If the **`devtools`** package is installed, run the line of code below to install **`covdataplot.`** 
+**`covdataplot`** can be installed directly from Github using **`devtools`**  If the **`devtools`** package is installed, run the line of code below to install **`covdataplot.`** 
 
 ``` r
 
@@ -546,12 +546,10 @@ graphics using City of Covington data.
 #Covington.Basic
 cov_basic <- cov_graph_theme +
   geom_bar(stat = "identity") +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
   
   covdata_theme()
 
-cov_basic <- covdata_plot(cov_basic, "cov.logo.blue")
+covdata_plot(cov_basic, "cov.logo.blue")
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-13-1.png)
@@ -578,8 +576,6 @@ covdata_plot(cov_gray, "cov.logo.white")
 #Covington.Gray
 cov_gray <- cov_graph_theme +
   geom_bar(stat = "identity") +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
   
   covdata_theme(plot.background.fill = "covington.light.gray")
 
@@ -594,10 +590,7 @@ covdata_plot(cov_gray, "cov.seal.blue")
 #Covington.Quirky
 cov_quirky <- cov_graph_theme +
   geom_bar(stat = "identity", fill = covdata_color("covington.green")) +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
 
- 
   covdata_theme(panel.background.fill = "covington.blue",  
                 plot.background.fill = "covington.light.blue",
                 text.color = "covington.plain")
@@ -605,7 +598,7 @@ cov_quirky <- cov_graph_theme +
 covdata_plot(cov_quirky, "cov.logo.white")
 ```
 
-![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/cov_quirky.png)
 
 
 # Extras
