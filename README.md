@@ -115,8 +115,8 @@ that are used to represent data.
 <details>
   <summary><b>Data Component Functions</b></summary>
   <ol>
-    <li><a href="###covdata_color()">covdata_color()</a></li>
-    <li><a href="####covdata_palettes()">covdata_palettes()</a></li>
+    <li><a href="#covdata_color()">covdata_color()</a></li>
+    <li><a href="#covdata_palettes()">covdata_palettes()</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
