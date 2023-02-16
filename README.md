@@ -86,7 +86,7 @@ covdata_palette_colors <<- list(
 
 # City Logos
 
-The four City of Covington logos displayed below are used in **'covdataplot'**. The logo names are stored in an
+The four City of Covington logos displayed below are used in **`covdataplot`**. The logo names are stored in an
 character string named **`covington_logos`**.  *Unfortunately, at this time, we cannot make the image files for these logos publicly available.*
 
 ``` r
@@ -110,6 +110,22 @@ Several functions were created to customize the data components of the
 graphics plots to match the branding guidelines. The following functions
 make it easier to change the outline and fill colors of visual marks
 that are used to represent data.
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary><b>Data Component Functions</b></summary>
+  <ol>
+    <li><a href="###covdata_color()">covdata_color()</a></li>
+    <li><a href="####covdata_palettes()">covdata_palettes()</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
 
 ### covdata_color()
 
