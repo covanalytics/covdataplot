@@ -1,6 +1,6 @@
 ## README
 
-![](covdataplot_tutorial_cookbook_files/figure-markdown_github/covdata_plot_resized_small.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/covdataplot_githubsticker.png)
 
 This style guide is in development to create a reproducible process of
 creating publication-ready graphics with R’s [ggplot2
