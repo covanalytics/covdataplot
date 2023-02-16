@@ -632,7 +632,7 @@ simultaneously from the list of 14 palettes contained in
 
 ``` r
 # function to print all color paletttes in a list
-covdata_palettes_all <<- function(palette_list, palette_names){
+covdata_palettes_all <- function(palette_list, palette_names){
   nr <- length(palette_list)
   nc <- max(lengths(palette_list))
   ylim <- c(0, nr)
@@ -650,36 +650,10 @@ covdata_palettes_all <<- function(palette_list, palette_names){
        adj = 1)
 }
 
-palette_list <<- list(covdata_palette_colors[[14]], 
-                     covdata_palette_colors[[13]], 
-                     covdata_palette_colors[[12]], 
-                     covdata_palette_colors[[11]],
-                     covdata_palette_colors[[10]],
-                     covdata_palette_colors[[9]],
-                     covdata_palette_colors[[8]],
-                     covdata_palette_colors[[7]],
-                     covdata_palette_colors[[6]],
-                     covdata_palette_colors[[5]],
-                     covdata_palette_colors[[4]],
-                     covdata_palette_colors[[3]],
-                     covdata_palette_colors[[2]],
-                     covdata_palette_colors[[1]])
+palette_list <- rev(covdata_palette_colors)
 
 
-palette_names <<- rev(c("Brand", 
-                   "Pantones", 
-                   "Neutrals", 
-                   "Blues", 
-                   "Greens", 
-                   "Reds", 
-                   "Greys", 
-                   "YlOrRd", 
-                   "YlGnBu",
-                   "RdYlBu",
-                   "RdBu",
-                   "Spectral",
-                   "Paired",
-                   "Set3"))
+palette_names <- rev(names(covdata_palette_colors))
 
 covdata_palettes_all(palette_list, palette_names)
 ```
