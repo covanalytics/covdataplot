@@ -598,7 +598,7 @@ cov_quirky <- cov_graph_theme +
 covdata_plot(cov_quirky, "cov.logo.white")
 ```
 
-![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-16-1a.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
 
 # Extras
