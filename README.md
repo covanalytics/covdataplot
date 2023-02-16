@@ -127,7 +127,7 @@ that are used to represent data.
 
 
 
-### covdata_color()
+## covdata_color()
 
 **`covdata_color()`** was created to access the HEX color code options
 available in **`covington_colors`** by name. In the example below,
@@ -163,7 +163,7 @@ ggarrange(cov_graph_fill, cov_graph_color, nrow = 1)
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-### covdata_palettes()
+## covdata_palettes()
 
 **`covdata_palettes()`** was created to generate a color palette from
 the list of colors in **covdata_palette_colors**. The function has five
