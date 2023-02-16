@@ -111,7 +111,7 @@ graphics plots to match the branding guidelines. The following functions
 make it easier to change the outline and fill colors of visual marks
 that are used to represent data.
 
-**Note: Data used in examples below is sampled, as does accurately reflect Covington incentives.**
+**Note: Data used in examples below is sampled, and does accurately reflect Covington incentives.**
 
 ### covdata_color()
 
@@ -269,7 +269,7 @@ cov_graph +
 
 ### covdata_color_c()
 
-**`covdata_color_c()`** was created to apply a color aesthetic to a continuous variable using a *continuous* color
+**`covdata_color_c()`** was created to apply a color aesthetic to a continuous variable using a continuous color
 palette generated from **`covdata_palettes()`**.  The function has two arguments–**name** and **reverse**.
 
 -   **name** is the name of the color palette we want to use
@@ -303,7 +303,7 @@ cov_graph +
 
 ### covdata_fill_c()
 
-**`covdata_fill_c()`** was created to apply a fill aesthetic to a continuous variable using a *continuous* color
+**`covdata_fill_c()`** was created to apply a fill aesthetic to a continuous variable using a continuous color
 palette generated from **`covdata_palettes()`**.  The function can be used to fill points with color when
 *size* and *shape* arguments are supplied to `geom_point()`. The function has two arguments–**name** and **reverse**.
 
@@ -335,9 +335,6 @@ pnt_fill <- cov_graph +
   covdata_fill_c("YlOrRd") +
   labs(title = "Point Fill")+
   
-  theme(
-  panel.background = element_rect(fill = covdata_color("Covington.Light.Gray"))
-  )
 
 bar_fill <- cov_graph +
   geom_bar(stat = "identity", aes(fill = Incentives), size = 4)+
@@ -345,10 +342,6 @@ bar_fill <- cov_graph +
   covdata_fill_c("YlOrRd") +
   labs(title = "Bar Fill")+
   
-  theme(
-  panel.background = element_rect(fill = covdata_color("Covington.Light.Gray"))
-  )
-
 
 ggarrange(pnt_fill, bar_fill, nrow = 1)
 ```
