@@ -695,7 +695,7 @@ covdata_palettes_print <- function(name, n, ...){
   
   pal <- covdata_palettes(name, n, ...)
   
-  show_col(pal)
+  scales::show_col(pal)
   
 }
 
