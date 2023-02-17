@@ -616,7 +616,7 @@ distribution using any logo. The function has six arguments–**plot**,
 -   **save_height** is the height in inches for the saved graphics plot.
 
 ``` r
-covdata_plot_any <- function(plot, logo, logo_size = 1.4,
+covdata_plot_any <- function(plot, logo, logo_width = 1.4,
                           save_name,
                           save_width = 5,
                           save_height = 4){
@@ -633,7 +633,7 @@ footer <- grid::grobTree(
   y = grid::unit(0.61, "in"),
   gp = gpar(col = "#1100ff", lwd = 3)),
   grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'), 
-                   width = unit(logo_size, 'inches')))
+                   width = unit(logo_width, 'inches')))
  
 grob <- ggplot2::ggplotGrob(plot) 
 
