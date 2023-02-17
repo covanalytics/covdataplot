@@ -663,13 +663,12 @@ grid.draw(plot_grid)
 #Covington.Basic
 cov_basic <- cov_graph_theme +
   geom_bar(stat = "identity") +
-  #covdata_fill_d("Set3")+
-  #facet_wrap(~Use)+
   
   covdata_theme()
 
 
-cov_basic_any <- covdata_plot_any(cov_basic, "cov.logo.BLUEtm.png")
+covdata_plot_any(cov_basic, "cov.logo.BLUEtm.png")
+
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-17-1.png)
@@ -734,4 +733,4 @@ palette_names <- rev(names(covdata_palette_colors))
 covdata_palettes_all(palette_list, palette_names)
 ```
 
-![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-19-1.png)
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-20-1.png)
