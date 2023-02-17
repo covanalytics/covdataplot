@@ -372,9 +372,9 @@ The functions make it easier to change the color of the plot background, panel b
 
 #` function to fill backgrounds and chagne text color
 covdata_theme <- function(plot.background.fill = c("covington.plain",
-                                                    "covington.black", 
-                                                    "covington.blue", 
-                                                    "covington.navy", 
+                                                    "covington.black",
+                                                    "covington.blue",
+                                                    "covington.navy",
                                                     "covington.dark.blue",
                                                     "covington.light.blue",
                                                     "covington.green",
@@ -382,66 +382,66 @@ covdata_theme <- function(plot.background.fill = c("covington.plain",
                                                     "covington.gray",
                                                     "covington.light.gray",
                                                     "covington.og.blue"),
-                           panel.background.fill = c("covington.plain", 
-                                                     "covington.light.gray", 
+                           panel.background.fill = c("covington.plain",
+                                                     "covington.light.gray",
                                                      "covington.gray",
                                                      "covington.black",
                                                      "covington.blue",
                                                      "covington.light.blue"),
-                           text.color = c("covington.black", "covington.plain")){      
-  
-  
-  
+                           text.color = c("covington.black", "covington.plain")){
+
+
+
   #assign font family up front
-  font <- "Franklin Gothic Medium"                
-  
+  font <- "Franklin Gothic Medium"
+
   #replace elements we want to change
-  theme_bw() %+replace%                          
-    
-    
+  ggplot2::theme_bw() %+replace%
+
+
     #Custom theme settings
-    
-    theme(
-      
+
+    ggplot2::theme(
+
       #All text font
       text = ggplot2::element_text(family = font, color = unname(covington_colors[match.arg(text.color)])),
-      
+
       #Title format
       title = ggplot2::element_text(color = unname(covington_colors[match.arg(text.color)])),
-      
+
       #Axis format
       axis.text = ggplot2::element_text(colour = unname(covington_colors[match.arg(text.color)]),
-                               size = 9),
+                                        size = 9),
       axis.ticks = ggplot2::element_line(color = unname(covington_colors[match.arg(text.color)])),
-      
+
       axis.title.y = ggplot2::element_blank(),
-      axis.title.x = ggplot2::element_text(margin = margin(t=10,b=15), size = 10),
-      
+      axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t=10,b=15), size = 10),
+
       #Facet wrap background color
       strip.background = ggplot2::element_rect(fill="#cccccc"),
-      
+
       #Legend format
       legend.position = "top",
       legend.justification = "left",
       legend.direction = "horizontal",
       legend.text.align = 0,
       legend.margin = ggplot2::margin(l = -0.2, unit = "cm"),
-      
+
       legend.background = ggplot2::element_blank(),
-      legend.title = ggplot2::element_blank(), 
+      legend.title = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
       legend.text = ggplot2::element_text(family=font, size=8),
-      
+
       #color fill for plot and panel backgrounds
       plot.background = ggplot2::element_rect(fill = unname(covington_colors[match.arg(plot.background.fill)]),
                                               colour = NA),
-      
+
       panel.background = ggplot2::element_rect(fill = unname(covington_colors[match.arg(panel.background.fill)])),
-      
+
       #margins for plot and caption
       plot.margin = ggplot2::margin(t = 0.2, r = 0.2, b = 0.2, l = 0.2, unit = "cm"),
-      plot.caption = ggplot2::element_text(margin = margin(t=15,b=0, r=-0.7), hjust = 1, size = 9)
-      
+      plot.caption = ggplot2::element_text(margin = ggplot2::margin(t=15,b=0, r=-0.7), hjust = 1, size = 9)
+
     )
 }
   
@@ -485,50 +485,51 @@ the COV logo at the bottom left and a horizontal line across the entire plot wid
 
 ``` r
 covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
-                                  "cov.logo.white"), 
+                                         "cov.logo.white"),
                           save_name,
                           save_width = 5,
                           save_height = 4){
 
 
-logo_name <- unname(covington_logos[match.arg(logo)])  
+  logo_name <- unname(covington_logos[match.arg(logo)])
 
-logo_file <- magick::image_read(logo_name)
-logo_sized <- magick::image_resize(logo_file, 200)
-  
- 
-footer <- grid::grobTree(
-  grid::linesGrob(
-  x = grid::unit(c(0.001, 1.1), "npc"), 
-  y = grid::unit(0.61, "in"),
-  gp = gpar(col = "#1100ff", lwd = 3)),
-  grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'), 
-                   width = unit(1.4, 'inches')))
- 
-grob <- ggplot2::ggplotGrob(plot) 
+  logo_file <- magick::image_read(logo_name)
+  logo_sized <- magick::image_resize(logo_file, 200)
 
-plot_grid <- ggpubr::ggarrange(grob, footer,
+
+  footer <- grid::grobTree(
+    grid::linesGrob(
+      x = grid::unit(c(0.001, 1.1), "npc"),
+      y = grid::unit(0.61, "in"),
+      gp = grid::gpar(col = "#1100ff", lwd = 3)),
+    grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'),
+                     width = unit(1.4, 'inches')))
+
+  grob <- ggplot2::ggplotGrob(plot)
+
+  plot_grid <- ggpubr::ggarrange(grob, footer,
                                  ncol = 1, nrow = 2,
                                  heights = c(1, 0.001))
 
-if(!missing(save_name)) {
-  
-  
-  final.plot <- grid.draw(plot_grid)
-    
-  ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot, 
-              device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
-  
+  if(!missing(save_name)) {
+
+
+    final.plot <- grid::grid.draw(plot_grid)
+
+    ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot,
+                    device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
+
   }
 
-else {
+  else {
 
 
-grid.draw(plot_grid)
-  
+    grid::grid.draw(plot_grid)
+
   }
 
 }
+
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-13-1.png)
@@ -617,45 +618,45 @@ distribution using any logo. The function has six arguments–**plot**,
 
 ``` r
 covdata_plot_any <- function(plot, logo, logo_width = 1.4,
-                          save_name,
-                          save_width = 5,
-                          save_height = 4){
+                             save_name,
+                             save_width = 5,
+                             save_height = 4){
 
 
 
-logo_file <- magick::image_read(logo)
-logo_sized <- magick::image_resize(logo_file, 200)
-  
- 
-footer <- grid::grobTree(
-  grid::linesGrob(
-  x = grid::unit(c(0.001, 1.1), "npc"), 
-  y = grid::unit(0.61, "in"),
-  gp = gpar(col = "#1100ff", lwd = 3)),
-  grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'), 
-                   width = unit(logo_width, 'inches')))
- 
-grob <- ggplot2::ggplotGrob(plot) 
+  logo_file <- magick::image_read(logo)
+  logo_sized <- magick::image_resize(logo_file, 200)
 
-plot_grid <- ggpubr::ggarrange(grob, footer,
+
+  footer <- grid::grobTree(
+    grid::linesGrob(
+      x = grid::unit(c(0.001, 1.1), "npc"),
+      y = grid::unit(0.61, "in"),
+      gp = grid::gpar(col = "#1100ff", lwd = 3)),
+    grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'),
+                     width = unit(logo_width, 'inches')))
+
+  grob <- ggplot2::ggplotGrob(plot)
+
+  plot_grid <- ggpubr::ggarrange(grob, footer,
                                  ncol = 1, nrow = 2,
                                  heights = c(1, 0.001))
 
-if(!missing(save_name)) {
-  
-  
-  final.plot <- grid.draw(plot_grid)
-    
-  ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot, 
-              device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
-  
+  if(!missing(save_name)) {
+
+
+    final.plot <- grid::grid.draw(plot_grid)
+
+    ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot,
+                    device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
+
   }
 
-else {
+  else {
 
 
-grid.draw(plot_grid)
-  
+    grid::grid.draw(plot_grid)
+
   }
 
 }
