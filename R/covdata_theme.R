@@ -64,7 +64,7 @@ covdata_theme <- function(plot.background.fill = c("covington.plain",
       axis.ticks = ggplot2::element_line(color = unname(covington_colors[match.arg(text.color)])),
 
       axis.title.y = ggplot2::element_blank(),
-      axis.title.x = ggplot2::element_text(margin = margin(t=10,b=15), size = 10),
+      axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t=10,b=15), size = 10),
 
       #Facet wrap background color
       strip.background = ggplot2::element_rect(fill="#cccccc"),
@@ -89,7 +89,7 @@ covdata_theme <- function(plot.background.fill = c("covington.plain",
 
       #margins for plot and caption
       plot.margin = ggplot2::margin(t = 0.2, r = 0.2, b = 0.2, l = 0.2, unit = "cm"),
-      plot.caption = ggplot2::element_text(margin = margin(t=15,b=0, r=-0.7), hjust = 1, size = 9)
+      plot.caption = ggplot2::element_text(margin = ggplot2::margin(t=15,b=0, r=-0.7), hjust = 1, size = 9)
 
     )
 }

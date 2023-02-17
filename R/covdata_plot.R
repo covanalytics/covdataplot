@@ -37,7 +37,7 @@ covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.
     grid::linesGrob(
       x = grid::unit(c(0.001, 1.1), "npc"),
       y = grid::unit(0.61, "in"),
-      gp = gpar(col = "#1100ff", lwd = 3)),
+      gp = grid::gpar(col = "#1100ff", lwd = 3)),
     grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'),
                      width = unit(1.4, 'inches')))
 
@@ -50,7 +50,7 @@ covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.
   if(!missing(save_name)) {
 
 
-    final.plot <- grid.draw(plot_grid)
+    final.plot <- grid::grid.draw(plot_grid)
 
     ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot,
                     device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
@@ -60,7 +60,7 @@ covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.
   else {
 
 
-    grid.draw(plot_grid)
+    grid::grid.draw(plot_grid)
 
   }
 
