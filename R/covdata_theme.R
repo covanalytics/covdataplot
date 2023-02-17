@@ -44,12 +44,12 @@ covdata_theme <- function(plot.background.fill = c("covington.plain",
   font <- "Franklin Gothic Medium"
 
   #replace elements we want to change
-  theme_bw() %+replace%
+  ggplot2::theme_bw() %+replace%
 
 
     #Custom theme settings
 
-    theme(
+    ggplot2::theme(
 
       #All text font
       text = ggplot2::element_text(family = font, color = unname(covington_colors[match.arg(text.color)])),
