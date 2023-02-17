@@ -608,7 +608,7 @@ distribution using any logo. The function has six arguments–**plot**,
 -   **plot** is the ggplot object containing the data and style
     components.
 -   **logo** is the logo we want to use.
--   **logo_size** is the width adjustment in inches to the logo (default
+-   **logo_width** is the width adjustment in inches to the logo (default
     is set to 1.4)
 -   **save_name** is the name to use to save the graphics plot (e.g.,
     “test.png”).
