@@ -536,7 +536,7 @@ grid.draw(plot_grid)
 
 # Main Styles
 
-This section lays out the primary styles for use when publishing
+This section lays out the primary styles for publishing
 graphics using City of Covington data.
 
 ## Covington.Basic
