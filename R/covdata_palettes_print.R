@@ -15,7 +15,7 @@
 #' covdata_palettes_print("RdBu", n = 26, type = "continuous")
 
 #' @export
-covdata_palettes_print <<- function(name, n, ...){
+covdata_palettes_print <- function(name, n, ...){
 
   pal <- covdata_palettes(name, n, ...)
 
