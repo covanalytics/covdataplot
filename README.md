@@ -602,7 +602,7 @@ covdata_plot(cov_quirky, "cov.logo.white")
 
 **`covdata_plot_any()`** was created to finalize the graphics plot for
 distribution using any logo. The function has six arguments–**plot**,
-**logo**, **logo_size**, **save_name**, **save_width**, and
+**logo**, **logo_width**, **save_name**, **save_width**, and
 **save_height**.
 
 -   **plot** is the ggplot object containing the data and style
