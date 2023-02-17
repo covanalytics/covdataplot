@@ -38,7 +38,7 @@ For a correctly formatted footer, the plot must contain a Title, Subtitle,
 an X-Axis label and a three line caption.
 }
 \examples{
-covdata_plot(plot = plot,
+covdata_plot_any(plot = plot,
 logo = "cov.logo.BLUEtm.png",
 save_name = "plot_name")
 }

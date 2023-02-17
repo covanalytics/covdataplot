@@ -16,7 +16,7 @@
 #' @param save_heght the height in inches for the saved graphics plot.  The default is 4 'in'
 #' @keywords covdata_plot_any
 #' @examples
-#' covdata_plot(plot = plot,
+#' covdata_plot_any(plot = plot,
 #' logo = "cov.logo.BLUEtm.png",
 #' save_name = "plot_name")
 
