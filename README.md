@@ -598,6 +598,83 @@ covdata_plot(cov_quirky, "cov.logo.white")
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
 
+### covdata_plot_any()
+
+**`covdata_plot_any()`** was created to finalize the graphics plot for
+distribution using any logo. The function has six arguments–**plot**,
+**logo**, **logo_size**, **save_name**, **save_width**, and
+**save_height**.
+
+-   **plot** is the ggplot object containing the data and style
+    components.
+-   **logo** is the logo we want to use.
+-   **logo_size** is the width adjustment in inches to the logo (default
+    is set to 1.4)
+-   **save_name** is the name to use to save the graphics plot (e.g.,
+    “test.png”).
+-   **save_width** is the width in inches for the saved graphics plot.
+-   **save_height** is the height in inches for the saved graphics plot.
+
+``` r
+covdata_plot_any <- function(plot, logo, logo_size = 1.4,
+                          save_name,
+                          save_width = 5,
+                          save_height = 4){
+
+
+
+logo_file <- magick::image_read(logo)
+logo_sized <- magick::image_resize(logo_file, 200)
+  
+ 
+footer <- grid::grobTree(
+  grid::linesGrob(
+  x = grid::unit(c(0.001, 1.1), "npc"), 
+  y = grid::unit(0.61, "in"),
+  gp = gpar(col = "#1100ff", lwd = 3)),
+  grid::rasterGrob(logo_sized, x = 0.004, vjust = -0.10, just = c('left', 'bottom'), 
+                   width = unit(logo_size, 'inches')))
+ 
+grob <- ggplot2::ggplotGrob(plot) 
+
+plot_grid <- ggpubr::ggarrange(grob, footer,
+                                 ncol = 1, nrow = 2,
+                                 heights = c(1, 0.001))
+
+if(!missing(save_name)) {
+  
+  
+  final.plot <- grid.draw(plot_grid)
+    
+  ggplot2::ggsave(paste(save_name, "_", lubridate::today(), ".png", sep = ""),final.plot, 
+              device = "png", width = save_width, height = save_height, unit = "in", dpi = 120)
+  
+  }
+
+else {
+
+
+grid.draw(plot_grid)
+  
+  }
+
+}
+
+#Covington.Basic
+cov_basic <- cov_graph_theme +
+  geom_bar(stat = "identity") +
+  #covdata_fill_d("Set3")+
+  #facet_wrap(~Use)+
+  
+  covdata_theme()
+
+
+cov_basic_any <- covdata_plot_any(cov_basic, "cov.logo.BLUEtm.png")
+```
+
+![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-17-1.png)
+
+
 # Extras
 
 ## covdata_palettes_print()
