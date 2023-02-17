@@ -684,10 +684,9 @@ time from the list of 14 palettes contained in
 
 -   **name** is the name of the color palette in covdata_palette_colors.
 -   **n** is the number of colors from the color palette to display.
--   **...** additional arguments from 'covdata_palettes' (e.g., type, reverse)
+-   **...** additional arguments from **`covdata_palettes()`** (e.g., type, reverse)
 
-The graphic below displays the **Pantones**
-palette.
+The graphic below displays the Pantones palette.
 
 ``` r
 # function to print one color palette and modify by type and number of colors
@@ -696,7 +695,7 @@ covdata_palettes_print <- function(name, n, ...){
   
   pal <- covdata_palettes(name, n, ...)
   
-  show_col(pal, )
+  show_col(pal)
   
 }
 
