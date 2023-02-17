@@ -557,12 +557,12 @@ covdata_plot(cov_basic, "cov.logo.blue")
 
 ``` r
 #Covington.Dark
-cov_gray <- cov_graph_theme +
+cov_dark <- cov_graph_theme +
   geom_bar(stat = "identity") +
   
   covdata_theme(plot.background.fill = "covington.gray", text.color = "covington.plain")
 
-covdata_plot(cov_gray, "cov.logo.white")
+covdata_plot(cov_dark, "cov.logo.white")
 ```
 
 ![](covdataplot_tutorial_cookbook_files/figure-markdown_github/unnamed-chunk-14-1.png)
@@ -680,7 +680,13 @@ covdata_plot_any(cov_basic, "cov.logo.BLUEtm.png")
 
 **`covdata_palettes_print()`** was created to visualize one palette at a
 time from the list of 14 palettes contained in
-**covdata_palette_colors**. The graphic below displays the **Pantones**
+**covdata_palette_colors**. 
+
+-   **name** is the name of the color palette in covdata_palette_colors.
+-   **n** is the number of colors from the color palette to display.
+-   **...** additional arguments from 'covdata_palettes' (e.g., type, reverse)
+
+The graphic below displays the **Pantones**
 palette.
 
 ``` r
