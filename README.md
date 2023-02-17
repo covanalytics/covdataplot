@@ -481,7 +481,7 @@ the COV logo at the bottom left and a horizontal line across the entire plot wid
 -   **save_width** is the width in inches for the saved graphics plot.
 -   **save_height** is the height in inches for the saved graphics plot.
 
-
+***For a correctly formatted footer, the plot must contain a Title, Subtitle, an X-Axis label and a three line caption.***
 
 ``` r
 covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
@@ -615,6 +615,8 @@ distribution using any logo. The function has six arguments–**plot**,
     “test.png”).
 -   **save_width** is the width in inches for the saved graphics plot.
 -   **save_height** is the height in inches for the saved graphics plot.
+
+***For a correctly formatted footer, the plot must contain a Title, Subtitle, an X-Axis label and a three line caption.***
 
 ``` r
 covdata_plot_any <- function(plot, logo, logo_width = 1.4,
