@@ -17,6 +17,7 @@
 #' covdata_theme(plot.background.fill = "covington.light.gray") #Covington.Gray style
 #' covdata_theme(panel.background.fill = "covington.blue",plot.backgroundd.fill = "covington.light.blue",
 #' text.color = "covington.plain") # Covington.Quirky style
+#' @importFrom ggplot2 %+replace%
 
 #' @export
 covdata_theme <- function(plot.background.fill = c("covington.plain",
