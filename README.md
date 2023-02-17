@@ -611,7 +611,7 @@ palette.
 ``` r
 # function to print one color palette and modify by type and number of colors
 # calls the covdata_palettes function to create palette
-covdata_palettes_print <<- function(name, n, ...){
+covdata_palettes_print <- function(name, n, ...){
   
   pal <- covdata_palettes(name, n, ...)
   
