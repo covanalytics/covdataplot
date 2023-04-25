@@ -48,7 +48,7 @@ covington_colors <- c("covington.blue" = "#0047ba",
 ```
 
 **`covdata_palette_colors`** is a list of character strings that
-contains 14 color palettes, including the Brand, Pantones, and Neutrals
+contains 15 color palettes, including the Brand, Pantones, and Neutrals
 palettes. The additional palettes (‘Blues’ through ‘Set3’) are needed
 when data components of the graphics plot must be styled to show
 differences in along continuous, diverging, or discrete scales. These
