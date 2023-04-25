@@ -30,7 +30,11 @@
 #' Paired = c("#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99",
 #' "#E31A1C", "#FDBF6F", "#FF7F00", "#CAB2D6", "#6A3D9A", "#FFFF99", "#B15928"),
 #' Set3 = c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3",
-#' "#FDB462", "#B3DE69", "#FCCDE5", "#D9D9D9", "#BC80BD","#CCEBC5", "#FFED6F"))
+#' "#FDB462", "#B3DE69", "#FCCDE5", "#D9D9D9", "#BC80BD","#CCEBC5", "#FFED6F"),
+#' Set25 = c("dodgerblue2", "#E31A1C", "green4", "#6A3D9A", "#FF7F00", "black", "gold1",
+#' "skyblue2", "#FB9A99", "palegreen2", "#CAB2D6", "#FDBF6F", "gray70", "khaki2",
+#' "maroon", "orchid1", "deeppink1", "blue1", "steelblue4", "darkturquoise", "green1",
+#' "yellow4", "yellow3", "darkorange4", "brown"))
 
 #' @export
 covdata_palette_colors <- list(
@@ -55,4 +59,8 @@ covdata_palette_colors <- list(
              "#FFFF99", "#B15928"),
   Set3 = c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3",
            "#FDB462", "#B3DE69", "#FCCDE5", "#D9D9D9", "#BC80BD",
-           "#CCEBC5", "#FFED6F"))
+           "#CCEBC5", "#FFED6F"),
+  Set25 = c("dodgerblue2", "#E31A1C", "green4", "#6A3D9A", "#FF7F00", "black", "gold1",
+            "skyblue2", "#FB9A99", "palegreen2", "#CAB2D6", "#FDBF6F", "gray70", "khaki2",
+            "maroon", "orchid1", "deeppink1", "blue1", "steelblue4", "darkturquoise", "green1",
+            "yellow4", "yellow3", "darkorange4", "brown"))
