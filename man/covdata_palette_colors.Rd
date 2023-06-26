@@ -11,7 +11,7 @@ An object of class \code{list} of length 15.
 covdata_palette_colors
 }
 \description{
-covdata_palette_colors is a character string that contains 14 color palettes,
+covdata_palette_colors is a character string that contains 15 color palettes,
 including the Brand, Pantones, and Neutrals palettes for the Covington brand. The additional
 palettes ('Blues' through 'Set3') are needed when data components of the graphics plot must
 be styled to show differences along continuous, diverging, or discrete scales.  The additional
