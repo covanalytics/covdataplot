@@ -89,7 +89,7 @@ covdata_palette_colors <- list(
 
 # City Logos
 
-The four City of Covington logos displayed below are used in **`covdataplot`**. The logo names are stored in an
+The five City of Covington logos displayed below are used in **`covdataplot`**. The logo names are stored in an
 character string named **`covington_logos`**.  *Unfortunately, at this time, we cannot make the image files for these logos publicly available.*  The function **`covdata_plot_any()`** is available for use with any icon.
 
 ``` r
