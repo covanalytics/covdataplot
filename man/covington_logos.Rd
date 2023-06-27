@@ -5,7 +5,7 @@
 \alias{covington_logos}
 \title{covington_logos}
 \format{
-An object of class \code{character} of length 4.
+An object of class \code{character} of length 5.
 }
 \usage{
 covington_logos
@@ -19,6 +19,7 @@ style.  Each of the '.png' logo files must be available in the working directory
 covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
                       "cov.seal.white"="cov.seal.WHITE.png",
                       "cov.logo.blue"="cov.logo.BLUEtm.png",
-                      "cov.logo.white"="cov.logo.WHITEtm.png")
+                      "cov.logo.white"="cov.logo.WHITEtm.png",
+                      "cov.logo.pride"="cov.logo.pride.png")
 }
 \keyword{covington_logos}

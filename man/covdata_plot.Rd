@@ -6,7 +6,8 @@
 \usage{
 covdata_plot(
   plot,
-  logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue", "cov.logo.white"),
+  logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue", "cov.logo.white",
+    "cov.logo.pride"),
   save_name,
   save_width = 5,
   save_height = 4

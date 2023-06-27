@@ -9,10 +9,12 @@
 #' covington_logos <<- c("cov.seal.blue"="cov.seal.BLUE.png",
 #'                       "cov.seal.white"="cov.seal.WHITE.png",
 #'                       "cov.logo.blue"="cov.logo.BLUEtm.png",
-#'                       "cov.logo.white"="cov.logo.WHITEtm.png")
+#'                       "cov.logo.white"="cov.logo.WHITEtm.png",
+#'                       "cov.logo.pride"="cov.logo.pride.png")
 
 #' @export
 covington_logos <- c("cov.seal.blue"="cov.seal.BLUE.png",
                       "cov.seal.white"="cov.seal.WHITE.png",
                       "cov.logo.blue"="cov.logo.BLUEtm.png",
-                      "cov.logo.white"="cov.logo.WHITEtm.png")
+                      "cov.logo.white"="cov.logo.WHITEtm.png",
+                     "cov.logo.pride"="cov.logo.pride.png")
