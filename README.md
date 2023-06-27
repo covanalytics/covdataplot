@@ -96,7 +96,8 @@ character string named **`covington_logos`**.  *Unfortunately, at this time, we 
 covington_logos <- c("cov.seal.blue"="cov.seal.BLUE.png",
                      "cov.seal.white"="cov.seal.WHITE.png",
                      "cov.logo.blue"="cov.logo.BLUEtm.png",
-                     "cov.logo.white"="cov.logo.WHITEtm.png")
+                     "cov.logo.white"="cov.logo.WHITEtm.png",
+                      "cov.logo.pride"="cov.logo.pride.png")
 
 
 
@@ -489,7 +490,7 @@ the COV logo at the bottom left and a horizontal line across the entire plot wid
 
 ``` r
 covdata_plot <- function(plot, logo = c("cov.seal.blue", "cov.seal.white", "cov.logo.blue",
-                                         "cov.logo.white"),
+                                         "cov.logo.white", "cov.logo.pride"),
                           save_name,
                           save_width = 5,
                           save_height = 4){
